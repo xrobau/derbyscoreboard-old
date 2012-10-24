@@ -86,17 +86,10 @@ $sb(function() {
   }, function(event, node) {
     $("#ConditionalTweets tr.ConditionalTweet[data-UUID='"+node.$sbId+"']").remove();
   });
-  $("#ConditionalTweetConfigurationDialog").dialog({
-    title: "Conditional Tweet Configuration",
-    modal: true,
-    width: 750,
-    height: 550,
-    autoOpen: false,
-    buttons: { Close: function() { $(this).dialog("close"); } }
+  _crgUtils.bindAndRun($("input:checkbox#EditConditionalTweetsCheckBox").button(), "click", function() {
+    $("#ConditionalTweetConfiguration").toggleClass("show", this.checked);
+    $(this).button("option", "label", (this.checked ? "Hide Conditional Tweets" : "Edit Conditional Tweets"));
   });
-  $("button.EditConditionalTweets").click(function() {
-    $("#ConditionalTweetConfigurationDialog").dialog("open");
-  }).button();
   $("#HelpText").insertBefore("#ConditionalTweets");
   $("#ShowHelp").change(function() {
     $("#HelpText").toggle(this.checked);
@@ -117,24 +110,55 @@ $sb(function() {
   });
 
   parseInputFieldFormatSpecifiers();
+
+  var keys = [ ];
+  $.get("/FormatSpecifiers/keys").done(function(data) {
+    $.each( data.split(/\s/), function(i,e) {
+      $.ajax("/FormatSpecifiers/description", {
+        async: false,
+        data: { format: e },
+        success: function(desc) {
+          keys.push({ label: e+" ("+desc+")", value: e });
+        }
+      });
+    });
+    setupInputFieldAutoComplete(keys);
+  });
 });
 
 function parseInputFieldFormatSpecifiers() {
-  var dialog = $("#ConditionalTweetConfigurationDialog");
-  if (dialog.dialog("isOpen")) {
+  var div = $("#ConditionalTweetConfiguration");
+  if (div.hasClass("show")) {
     $.each( [ "Condition", "Tweet" ], function(i,e) {
-      var input = dialog.find("input:text."+e);
+      var input = div.find("input:text."+e);
       if (input.val()) {
         $.post("/FormatSpecifiers/parse", {
           format: input.val()
         }, function(data) {
-          dialog.find("a.Preview."+e).text(data);
+          div.find("a.Preview."+e).text(data);
         });
       } else {
-        dialog.find("a.Preview."+e).text("");
+        div.find("a.Preview."+e).text("");
       }
     });
   }
   setTimeout(parseInputFieldFormatSpecifiers, 1000);
 }
 
+function setupInputFieldAutoComplete(keys) {
+  $("#ConditionalTweetConfiguration")
+    .find("input:text.Condition,input:text.Tweet").autocomplete({
+      source: function(request, response) {
+        var key = request.term.split(" ").pop();
+        response(key ? $.ui.autocomplete.filter(keys, key) : "");
+      },
+      focus: function() { return false; },
+      select: function(event, ui) {
+        var words = this.value.split(" ");
+        words.pop();
+        words.push(ui.item.value);
+        this.value = words.join(" ");
+        return false;
+      }
+    });
+}
