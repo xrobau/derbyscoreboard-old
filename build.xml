@@ -4,6 +4,7 @@
   <property name="ant.build.javac.source" value="1.5"/>
   <property name="ant.build.javac.target" value="1.5"/>
 
+  <property name="java.home" value="C:\Program Files\Java\jdk1.7.0_07"/>
   <property name="src.dir" value="src"/>
   <property name="dest.dir" value="bin"/>
   <property name="jdoc.dir" value="jdoc"/>
