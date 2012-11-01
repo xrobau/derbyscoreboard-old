@@ -2,61 +2,61 @@
 <document Version="0.3.0-beta3-20121025161637" SystemTime="1351196844738">
   <Viewers>
     <Twitter>
-      <ConditionalTweet Id="00000000-0000-0000-0000-000000000001">
+      <ConditionalTweet Id="00000000-0000-0000-0000-000000000010">
         <Condition><![CDATA[%citms=5:00 %ciN=0 %cir=true]]></Condition>
-        <Tweet><![CDATA[5 minutes to Derby! %t1n vs %t2n]]></Tweet>
+        <Tweet><![CDATA[5 minutes to Derby! %t1Nt vs %t2Nt]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-000000000002">
+      <ConditionalTweet Id="00000000-0000-0000-0000-000000000020">
         <Condition><![CDATA[%sbip=true %sbio=false]]></Condition>
-        <Tweet><![CDATA[Start Period %cpN, %t1n vs %t2n]]></Tweet>
+        <Tweet><![CDATA[Start Period %cpN, %t1Nt vs %t2Nt]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-000000000003">
+      <ConditionalTweet Id="00000000-0000-0000-0000-000000000030">
         <Condition><![CDATA[%cptms=25:00]]></Condition>
-        <Tweet><![CDATA[Period %cpN time %cptms, %t1n %t1s, %t2n %t2s]]></Tweet>
+        <Tweet><![CDATA[Period %cpN time %cptms, %t1Nt %t1s, %t2Nt %t2s]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-000000000004">
+      <ConditionalTweet Id="00000000-0000-0000-0000-000000000040">
         <Condition><![CDATA[%cptms=20:00]]></Condition>
-        <Tweet><![CDATA[Period %cpN time %cptms, %t1n %t1s, %t2n %t2s]]></Tweet>
+        <Tweet><![CDATA[Period %cpN time %cptms, %t1Nt %t1s, %t2Nt %t2s]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-000000000005">
+      <ConditionalTweet Id="00000000-0000-0000-0000-000000000050">
         <Condition><![CDATA[%cptms=15:00]]></Condition>
-        <Tweet><![CDATA[Period %cpN time %cptms, %t1n %t1s, %t2n %t2s]]></Tweet>
+        <Tweet><![CDATA[Period %cpN time %cptms, %t1Nt %t1s, %t2Nt %t2s]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-000000000006">
+      <ConditionalTweet Id="00000000-0000-0000-0000-000000000060">
         <Condition><![CDATA[%cptms=10:00]]></Condition>
-        <Tweet><![CDATA[Period %cpN time %cptms, %t1n %t1s, %t2n %t2s]]></Tweet>
+        <Tweet><![CDATA[Period %cpN time %cptms, %t1Nt %t1s, %t2Nt %t2s]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-000000000007">
+      <ConditionalTweet Id="00000000-0000-0000-0000-000000000070">
         <Condition><![CDATA[%cptms=5:00 %cpN=1]]></Condition>
-        <Tweet><![CDATA[Period %cpN time %cptms, %t1n %t1s, %t2n %t2s]]></Tweet>
+        <Tweet><![CDATA[Period %cpN time %cptms, %t1Nt %t1s, %t2Nt %t2s]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-000000000008">
+      <ConditionalTweet Id="00000000-0000-0000-0000-000000000080">
         <Condition><![CDATA[%cptms=5:00 %cpN=2]]></Condition>
-        <Tweet><![CDATA[Last 5 Minutes! %t1n %t1s, %t2n %t2s]]></Tweet>
+        <Tweet><![CDATA[Last 5 Minutes! %t1Nt %t1s, %t2Nt %t2s]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-000000000009">
+      <ConditionalTweet Id="00000000-0000-0000-0000-000000000090">
         <Condition><![CDATA[%cjr=false %cpN=2 %cptms<5]]></Condition>
-        <Tweet><![CDATA[End of jam %cjN, Clock %cptms, %t1n %t1s, %t2n %t2s]]></Tweet>
+        <Tweet><![CDATA[End of jam %cjN, Clock %cptms, %t1Nt %t1s, %t2Nt %t2s]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-00000000000a">
+      <ConditionalTweet Id="00000000-0000-0000-0000-0000000000a0">
         <Condition><![CDATA[%sbip=false %cpN=1]]></Condition>
-        <Tweet><![CDATA[Halftime: %t1n %t1s, %t2n %t2s]]></Tweet>
+        <Tweet><![CDATA[Halftime: %t1Nt %t1s, %t2Nt %t2s]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-00000000000b">
+      <ConditionalTweet Id="00000000-0000-0000-0000-0000000000b0">
         <Condition><![CDATA[%citms=5:00 %ciN=1 %cir=true]]></Condition>
         <Tweet><![CDATA[5:00 until the Second Half Starts]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-00000000000c">
+      <ConditionalTweet Id="00000000-0000-0000-0000-0000000000c0">
         <Condition><![CDATA[%cjr=false %sbos=false %sbip=false %cpN=2]]></Condition>
-        <Tweet><![CDATA[Full time - UNOFFICIAL Final: %t1n %t1s, %t2n %t2s]]></Tweet>
+        <Tweet><![CDATA[Full time - UNOFFICIAL Final: %t1Nt %t1s, %t2Nt %t2s]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-00000000000d">
+      <ConditionalTweet Id="00000000-0000-0000-0000-0000000000d0">
         <Condition><![CDATA[%sbos=true %sbip=false %cpN=2]]></Condition>
-        <Tweet><![CDATA[Official Final Score: %t1n %t1s, %t2n %t2s]]></Tweet>
+        <Tweet><![CDATA[Official Final Score: %t1Nt %t1s, %t2Nt %t2s]]></Tweet>
       </ConditionalTweet>
-      <ConditionalTweet Id="00000000-0000-0000-0000-00000000000e">
+      <ConditionalTweet Id="00000000-0000-0000-0000-0000000000e0">
         <Condition><![CDATA[%sbio=true]]></Condition>
-        <Tweet><![CDATA[Overtime! %t1n %t1s, %t2n %t2s]]></Tweet>
+        <Tweet><![CDATA[Overtime! %t1Nt %t1s, %t2Nt %t2s]]></Tweet>
       </ConditionalTweet>
     </Twitter>
   </Viewers>
